@@ -17,22 +17,20 @@ public class Solution {
         // TODO: Iterate through the map and print the unique words and their counts
         // Format: "word: count"
 
-
-	String line = scanner.nextLine();
-        
+	 String line = scanner.nextLine();
         String[] words = line.split("\\s+");
-        
-        HashMap<String, Integer> freqMap = new HashMap<>();
-        
+
+        LinkedHashMap<String, Integer> freqMap = new LinkedHashMap<>();
+
         for (String word : words) {
             freqMap.put(word, freqMap.getOrDefault(word, 0) + 1);
         }
-        
+
         for (Map.Entry<String, Integer> entry : freqMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
-        
+
         scanner.close();
-        
+
     }
 }

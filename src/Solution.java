@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -16,8 +16,8 @@ public class Solution {
         
         // TODO: Iterate through the map and print the unique words and their counts
         // Format: "word: count"
-
-	 String line = scanner.nextLine();
+	
+	String line = scanner.nextLine();
         String[] words = line.split("\\s+");
 
         LinkedHashMap<String, Integer> freqMap = new LinkedHashMap<>();
